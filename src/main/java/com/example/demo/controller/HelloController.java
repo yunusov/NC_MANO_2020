@@ -16,6 +16,7 @@ public class HelloController {
 
     @GetMapping("/world")
     public String hello(@RequestParam(value = "name", defaultValue = "World") String name) {
+        log.error("test");
         return String.format("Hello %s!", name);
     }
 }
